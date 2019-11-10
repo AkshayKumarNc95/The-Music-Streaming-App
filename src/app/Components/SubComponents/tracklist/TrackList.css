@@ -1,0 +1,11 @@
+#track-list-container {
+  width: 100%;
+  height: 22em;
+  overflow-y: auto;
+}
+#track-list-container #loading-bar {
+  align-content: center;
+}
+#track-list-container #loading-bar #loading-ico {
+  margin-left: 50%;
+}

@@ -1,0 +1,79 @@
+#home-outer-most > #home-player-container {
+  margin: 2em;
+  border-top: 2px solid white;
+  color: white;
+  padding-top: 1em;
+  height: 5em;
+  width: 100%;
+}
+#home-outer-flex-container {
+  display: flex;
+  height: 100%;
+  padding: 1em;
+  justify-content: space-around;
+}
+#home-outer-flex-container > .container {
+  background: white;
+  height: 32em;
+  color: black;
+  padding: 0.3em;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+}
+#home-track-container {
+  flex: 2.5;
+}
+#home-play-container {
+  flex: 1.5;
+}
+#home-track-container > .header {
+  color: white;
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+#home-play-container > .header {
+  color: white;
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.filter-list,
+.play-list-select {
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 3.5em;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.track-list-container,
+.play-list-container,
+.play-song-container {
+  padding: 5px;
+  margin-top: 0.5em;
+  height: 23em;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+}
+.play-list-container {
+  height: 18em;
+}
+.play-song-container {
+  height: 5em;
+}
+.play-seg-ment {
+  height: 4em;
+}
+.play-list-seg-ment {
+  height: 17em;
+}
+.track-list-seg-ment {
+  height: 22em;
+}

@@ -1,0 +1,19 @@
+.filter-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.filter-container> Dropdown{
+    flex: .7;
+    
+}
+
+.filter-container> span{
+    font-weight: bold;
+    margin: 10px;
+}

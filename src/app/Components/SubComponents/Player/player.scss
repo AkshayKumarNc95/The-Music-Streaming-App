@@ -1,0 +1,41 @@
+
+#player-container{
+    display: flex;   
+}
+
+#player-controls{
+  flex: 2.4;
+  padding: 15px;
+}
+
+.player-song-details-container{
+  flex: 3;
+}
+
+.player-song-details{
+  flex : 1;
+}
+
+
+#player-controls > #player-btn-left,
+#player-btn-right {
+  display: contents;
+  // display: contents;
+}
+
+#player-btn-icon-left{
+  float: left;
+  margin-top: 13px ;
+}
+
+#player-btn-icon-right{
+  float: right;
+  margin-top: 13px ;
+}
+
+#music-player-audio{
+  margin: 0 auto;
+  &:focus {
+    outline: none;
+}
+}
