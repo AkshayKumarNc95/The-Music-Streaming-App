@@ -7,25 +7,28 @@
     border-radius: 10px;
 
     &>#track-info-header{
+        flex: 3;
         display: flex;
         flex-direction: column;
 
-        &>h2{
+        &>#trackinfo-title{
+            text-align: left;
+            color: white;
             padding-top:  0 0 0 0 ;
             margin: 0;
+            margin-left: 1.5em;
             margin-top: .5em;
-            margin-left: 1em;
-            width: 13em;
+            width: 25em;
+            height: 2em;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
-        &>Link{
+        &>#trackinfo-link-artist{
             margin: 0;
-            margin: .25em;
-            margin-left: 1.5em;
+            text-align: left;
+            margin-left: 1.6em;
+            margin-top: .5em;
         }
-
-
     }
 }

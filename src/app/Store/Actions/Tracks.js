@@ -1,5 +1,6 @@
 import jamendo from "../../api/jamendo.js";
 
+// Variabbles
 let style = "";
 let trend = "";
 let trackIds = new Set();
@@ -61,9 +62,23 @@ function getWhatisNeededFromTheTracks(tracks) {
         title: track.name,
         albumId: track.album_id,
         artists: [artists],
-        avatar: track.image
+        avatar: track.image,
+        songData: track.audio
       });
     }
     return res;
   }, []);
+}
+
+export function playMe(track) {
+  return dispatch => {
+    dispatch({
+      type: "PLAY_CURRENT_PLAYLIST",
+      payload: []
+    });
+    dispatch({
+      type: "PLAY_TRACK",
+      payload: track
+    });
+  };
 }

@@ -18,12 +18,12 @@ import { Link } from "react-router-dom";
 import "./Track.scss";
 
 export default function Track(props) {
-  const { addSongToPlayList, playThisSong, id, title, artists, avatar } = props;
+  const { addSongToPlayList, playThisSong, id, title, artists, avatar, custom } = props;
 
   return (
     <List.Item className = 'track-list-item'>
       <Image
-       id = "avatar-img"
+        id = "avatar-img"
         avatar
         src={avatar? avatar: "https://react.semantic-ui.com/images/avatar/small/helen.jpg"}
       />
@@ -45,19 +45,20 @@ export default function Track(props) {
         </Link>)}
         
       </List.Content>
-      <OtherControls addToPlayList={()=> addSongToPlayList(id)} play={()=> playThisSong(id)} />
+      <OtherControls addToPlayList={()=> addSongToPlayList(id)} play={()=> playThisSong(id)} custom = {custom} />
     </List.Item>
   );
 }
 
 function OtherControls(props) {
+  const custom = props.custom? props.custom:"plus";
   return (
     <div id="group-options">
       <Button onClick={props.play}>
         <Icon id="btn-icon" name="play" color="green" size="large"></Icon>
-      </Button>
+      </Button> 
       <Button onClick={props.addToPlayList}>
-        <Icon id="btn-icon" name="plus" color="grey" size="large"></Icon>
+        <Icon id="btn-icon" name={custom.secondIcon} color="grey" size="large"></Icon>
       </Button>
     </div>
   );

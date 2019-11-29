@@ -1,6 +1,6 @@
-import React from "react";
-import { Dropdown } from "semantic-ui-react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Dropdown } from "semantic-ui-react";
 
 import "./FilterList.css";
 import { getTracks } from "../../../Store/Actions/Tracks.js";
@@ -28,7 +28,7 @@ function getOptions(whichOne) {
       { key: Styles.rock, text: Styles.rock, value: Styles.rock },
       { key: Styles.voice, text: Styles.voice, value: Styles.voice }
     ];
-  } else {
+  } else if (whichOne === "Categories") {
     options = [
       {
         key: "None",
@@ -58,49 +58,53 @@ function getOptions(whichOne) {
       },
       { key: Trends.listens, text: "Most played", value: Trends.listens }
     ];
+  } else {
+    options = [];
   }
 
   return options;
 }
 
 function onSelect(event, data, callBack) {
-  console.log(data.placeholder);
-  console.log(data.value);
-
   // Call the action creator now!
   callBack(data.placeholder, data.value);
 }
 
+// Update's redux store upon select! 
 function FilterList(props) {
-  return (
-    <div className="filter-container">
-      <span>Filters:</span>
+  const { filterFor } = props;
 
-      <Dropdown
-        key="x-1"
-        placeholder="Style"
-        fluid
-        selection
-        options={getOptions("Style")}
-        onChange={(event, data) => onSelect(event, data, props.getTracks)}
-      />
-      <Dropdown
-        key="x-2"
-        placeholder="Categories"
-        fluid
-        selection
-        options={getOptions("Categories")}
-        onChange={(event, data) => onSelect(event, data, props.getTracks)}
-      />
-    </div>
-  );
+  if (filterFor && filterFor === "TRACKLIST") {
+    return (
+      <div className="filter-container">
+        <span>Filters:</span>
+        <Dropdown
+          key="x-1"
+          placeholder="Style"
+          fluid
+          selection
+          options={getOptions("Style")}
+          onChange={(event, data) =>
+            onSelect(event, data, props.getTracks)
+          }
+        />
+        <Dropdown
+          key="x-2"
+          placeholder="Categories"
+          fluid
+          selection
+          options={getOptions("Categories")}
+          onChange={(event, data) =>
+            onSelect(event, data, props.getTracks)
+          }
+        />
+      </div>
+    );
+  }
 }
 
 const mapDispatchToProps = {
-  getTracks
+  getTracks,
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(FilterList);
+export default connect(null, mapDispatchToProps)(FilterList);

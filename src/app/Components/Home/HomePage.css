@@ -62,11 +62,11 @@
   border-radius: 5px;
   color: black;
 }
-.play-list-container {
-  height: 18em;
-}
-.play-song-container {
-  height: 5em;
+#home-play-filter-container {
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 3px;
+  margin-top: 0.5em;
 }
 .play-seg-ment {
   height: 4em;

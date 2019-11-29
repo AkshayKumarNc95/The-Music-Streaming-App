@@ -1,0 +1,9 @@
+#play-lists-filter > #play-list-select,
+#play-lists-filter #play-list-tracks {
+  border: 2px solid black;
+  padding: 3.5px;
+  border-radius: 3px;
+}
+#play-lists-filter > #play-list-tracks {
+  margin-top: 0.6em;
+}

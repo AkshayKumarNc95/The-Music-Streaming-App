@@ -12,8 +12,17 @@
   flex: 3;
 }
 
-.player-song-details{
+.player-repeat-song{
   flex : 1;
+
+  &>#player-btn-repeat{
+    display: contents;
+    
+    &>#player-btn-icon-repeat{
+      margin-top: 1em;
+    }
+
+  }
 }
 
 

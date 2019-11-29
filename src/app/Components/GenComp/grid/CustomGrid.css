@@ -1,0 +1,22 @@
+.card-image {
+  object-fit: cover;
+  object-position: right;
+  vertical-align: middle;
+  width: 100%;
+}
+.card-image:hover {
+  cursor: pointer;
+}
+#card-header-span {
+  max-width: 250px;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+#card-header-span:hover {
+  color: 666;
+  cursor: pointer;
+}
+#loading-bar-gen-grid {
+  margin-left: 50%;
+  margin-top: 5%;
+}

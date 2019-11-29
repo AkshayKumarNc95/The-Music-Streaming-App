@@ -8,8 +8,14 @@
 .player-song-details-container {
   flex: 3;
 }
-.player-song-details {
+.player-repeat-song {
   flex: 1;
+}
+.player-repeat-song > #player-btn-repeat {
+  display: contents;
+}
+.player-repeat-song > #player-btn-repeat > #player-btn-icon-repeat {
+  margin-top: 1em;
 }
 #player-controls > #player-btn-left,
 #player-btn-right {

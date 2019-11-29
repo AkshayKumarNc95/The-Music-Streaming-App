@@ -1,3 +1,3 @@
-import DesktopContainer from './DesktopNav';
+import LayOut from './LayOut';
 
-export { DesktopContainer};
+export { LayOut};

@@ -1,0 +1,6 @@
+#gen-comp-outer {
+  margin: 2%;
+  height: 30em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}

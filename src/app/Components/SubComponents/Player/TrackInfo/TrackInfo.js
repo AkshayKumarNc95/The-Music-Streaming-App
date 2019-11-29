@@ -5,9 +5,7 @@ import {Link} from 'react-router-dom';
 import "./TrackInfo.scss";
 
 const TrackInfo = props => {
-  const avatar = undefined;
-  const title = undefined;
-  const id = undefined;
+  const { id, title, albumId, artists, avatar,  } = props;
   
   return (
     <Container id="track-info-container">
@@ -23,10 +21,18 @@ const TrackInfo = props => {
         />
       </div>
       <div id="track-info-header">
-        <h2>Titlehhhhhhhhhhhhhhhhhhhhhhhhhhggggggggggggggggggggggggggggggg</h2>
-        <Link to={"/Albums?id="+id} id = "ti-art-alm-lnk">
-           <span> {title? title: "Track-Name"}  </span>
+         <Link to={"/Albums?id="+id} id = "trackinfo-title">
+           <h2 id = 'trackinfo-h2'> {title? title: "Track-Name"}  </h2>
           </Link>
+
+          {artists? artists.map(artist=>{
+          return (<Link key = {artist.id} id = "trackinfo-link-artist" to={"/Artists?id="+artist.id}>
+            {artist.name? artist.name: "Unknown"},
+            </Link>)
+          }): (<Link id = "trackinfo-link-artist" to="/artists">
+            Artists
+          </Link>)}
+        
       </div>
     </Container>
   );
