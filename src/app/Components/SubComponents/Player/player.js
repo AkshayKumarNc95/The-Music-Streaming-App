@@ -75,6 +75,15 @@ export default class Player extends Component {
               size="big"
             ></Icon>
           </Button>
+          <Button id="player-btn-add" onClick={this.props.addSong}>
+            <Icon
+              id="player-btn-icon-repeat"
+              name="plus"
+              inverted
+              color="white"
+              size="big"
+            ></Icon>
+          </Button>
         </div>
       </div>
     );

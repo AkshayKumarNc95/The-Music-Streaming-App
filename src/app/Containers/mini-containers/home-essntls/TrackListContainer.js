@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { getTracks, playMe } from "../../../Store/Actions/Tracks";
 import { addTrackToPlayList } from "../../../Store/Actions/PlayLists";
 import TransistionablePortal_Select from "../../../Components/GenComp/portal/TransistionablePortal_Select_Fn";
+import {viewInfo} from '../../../Store/Actions/Info';
+
 
 class TrackListContainer extends Component {
   constructor(props) {
@@ -30,6 +32,7 @@ class TrackListContainer extends Component {
           fetchNextTracks={this.fetchNextTracks.bind(this)}
           loading={this.state.loading}
           custom={{ theme, secondIcon }}
+          handleOnLinkClick = {this.props.viewInfo}
         />
         {this.state.showSelectPlayList && (
           <TransistionablePortal_Select
@@ -88,6 +91,7 @@ const mapStateToProps = state1 => {
 };
 
 const mapDispatchToProps = {
+  viewInfo,
   getTracks,
   playMe,
   addTrackToPlayList

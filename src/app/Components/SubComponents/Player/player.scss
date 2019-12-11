@@ -1,30 +1,38 @@
-
-#player-container{
-    display: flex;   
+#player-container {
+  display: flex;
+  margin: 2% 0;
+  border-top: 2px solid white;
+  padding-top: 1%;
 }
 
-#player-controls{
+#player-controls {
   flex: 2.4;
   padding: 15px;
 }
 
-.player-song-details-container{
+.player-song-details-container {
   flex: 3;
 }
 
-.player-repeat-song{
-  flex : 1;
+.player-repeat-song {
+  flex: 1;
 
-  &>#player-btn-repeat{
+  & > #player-btn-repeat {
     display: contents;
-    
-    &>#player-btn-icon-repeat{
+
+    & > #player-btn-icon-repeat {
       margin-top: 1em;
     }
+  }
 
+  & > #player-btn-add {
+    display: contents;
+    & > #player-btn-icon-repeat {
+      margin-top: 1em;
+      padding:0;
+    }
   }
 }
-
 
 #player-controls > #player-btn-left,
 #player-btn-right {
@@ -32,19 +40,19 @@
   // display: contents;
 }
 
-#player-btn-icon-left{
+#player-btn-icon-left {
   float: left;
-  margin-top: 13px ;
+  margin-top: 13px;
 }
 
-#player-btn-icon-right{
+#player-btn-icon-right {
   float: right;
-  margin-top: 13px ;
+  margin-top: 13px;
 }
 
-#music-player-audio{
+#music-player-audio {
   margin: 0 auto;
   &:focus {
     outline: none;
-}
+  }
 }

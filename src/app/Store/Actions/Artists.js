@@ -5,8 +5,8 @@ export const getArtists = (next = undefined) => {
   let artistspage =
     "/artists/?client_id=" +
     client_id +
-    "&format=jsonpretty&limit=15&" +
-    "&lang=en&fullcount=true";
+    "&format=jsonpretty&limit=15" +
+    "&fullcount=true";
 
 
   return async function(dispatch, getState) {
@@ -40,3 +40,5 @@ function getWhatisNeededFromTheArtists(artists) {
     };
   });
 }
+
+

@@ -9,7 +9,7 @@ import "./HomePage.scss";
 import FilterList from "../SubComponents/FilterList/FIlterList.js";
 import SelectPlayList from '../SubComponents/PlayLists/selectplaylist/SelectPlayList.js';
 import TrackListContainer from "../../Containers/mini-containers/home-essntls/TrackListContainer.js";
-import PlayerContainer from "../../Containers/mini-containers/home-essntls/PlayerContainer";
+
 import PlayListsContainer from '../../Containers/mini-containers/home-essntls/PlayListsContainer';
 import AddPlayList from '../SubComponents/PlayLists/addplaylist/AddPlayList';
 
@@ -43,9 +43,7 @@ function HomePage(props) {
           </div>
         </Container>
       </div>
-      <Container id="home-player-container">
-        <PlayerContainer />
-      </Container>
+   
     </div>
   );
 }

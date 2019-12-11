@@ -1,5 +1,8 @@
 #player-container {
   display: flex;
+  margin: 2% 0;
+  border-top: 2px solid white;
+  padding-top: 1%;
 }
 #player-controls {
   flex: 2.4;
@@ -16,6 +19,13 @@
 }
 .player-repeat-song > #player-btn-repeat > #player-btn-icon-repeat {
   margin-top: 1em;
+}
+.player-repeat-song > #player-btn-add {
+  display: contents;
+}
+.player-repeat-song > #player-btn-add > #player-btn-icon-repeat {
+  margin-top: 1em;
+  padding: 0;
 }
 #player-controls > #player-btn-left,
 #player-btn-right {

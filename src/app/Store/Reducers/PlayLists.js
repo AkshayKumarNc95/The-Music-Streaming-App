@@ -41,7 +41,7 @@ export function PlayListsReducer(state = [], action) {
   console.log(action);
   switch (action.type) {
     case "GET_PLAY_LISTS": {
-      return action.payload;
+      return action.payload.length>0?action.payload: state ;
     }
     case "ADD_PLAYLIST": {
       const newState = [...state];

@@ -5,8 +5,8 @@ export const getAlbums = (next = undefined) => {
   let albumsPage =
     "/albums/?client_id=" +
     client_id +
-    "&format=jsonpretty&limit=15&" +
-    "&lang=en&fullcount=true";
+    "&format=jsonpretty&limit=15" +
+    "&fullcount=true";
 
 
   return async function(dispatch, getState) {

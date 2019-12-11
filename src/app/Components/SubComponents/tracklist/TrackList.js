@@ -20,7 +20,7 @@ function debounceEventHandler(...args) {
 }
 
 export default function AudioTrackList(props) {
-  const { tracks, playTrackHandler, addOrRemoveTrack, custom } = props;
+  const { tracks, playTrackHandler, addOrRemoveTrack, custom,handleOnLinkClick } = props;
 
   //Use custom.theme here to change!
   console.log(props);
@@ -43,6 +43,7 @@ export default function AudioTrackList(props) {
                     artists={track.artists}
                     avatar={track.avatar}
                     custom={custom}
+                    handleOnLinkClick = {handleOnLinkClick}
                   />
                 );
               })

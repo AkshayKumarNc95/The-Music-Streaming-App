@@ -4,6 +4,9 @@ import {tracksReducer, playTrack} from './Tracks.js';
 import {PlayListsReducer,PlayListReducer, SelectedPlayListReducer, playSelectedPlayList} from './PlayLists.js';
 import {artistsReducer} from './Artists';
 import {albumsReducer} from './Albums';
+import {infoViewReducer} from './Info';
+import {Register, Login} from './Authentication';
+
 
 export default combineReducers(
     {
@@ -14,7 +17,10 @@ export default combineReducers(
         selectedPlayList: SelectedPlayListReducer,
         playCurrentPlayList : playSelectedPlayList,
         artists: artistsReducer,
-        albums: albumsReducer
+        albums: albumsReducer,
+        ViewInfo: infoViewReducer,
+        RegisterUser: Register,
+        Authentication: Login
     }
 );
 

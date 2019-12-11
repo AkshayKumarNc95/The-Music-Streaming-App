@@ -17,8 +17,12 @@ import { Link } from "react-router-dom";
 // Custom
 import "./Track.scss";
 
+function onLinkClick(type = "artists", id, callBack){
+  callBack &&callBack(id, type);
+}
+
 export default function Track(props) {
-  const { addSongToPlayList, playThisSong, id, title, artists, avatar, custom } = props;
+  const { addSongToPlayList, playThisSong, id, title, artists, avatar, custom, handleOnLinkClick } = props;
 
   return (
     <List.Item className = 'track-list-item'>
@@ -37,7 +41,8 @@ export default function Track(props) {
         
         {/* Pending- Navigating to Artist page */}
         {artists? artists.map(artist=>{
-          return (<Link key = {artist.id} className="link-artist" to={"/Artists?id="+artist.id}>
+          const linkType = custom.isAlbums? "albums":"artists"; //to={"/Artists?id="+artist.id}
+          return (<Link key = {artist.id} className="link-artist" onClick = {()=>onLinkClick(linkType,artist.id, handleOnLinkClick)} >
             {artist.name? artist.name: "Unknown"},
           </Link>)
         }): (<Link className="link-artist" to="/artists">
@@ -51,7 +56,7 @@ export default function Track(props) {
 }
 
 function OtherControls(props) {
-  const custom = props.custom? props.custom:"plus";
+  const custom = props.custom? props.custom:{secondIcon: "plus"};
   return (
     <div id="group-options">
       <Button onClick={props.play}>

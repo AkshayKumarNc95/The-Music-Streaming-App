@@ -23,6 +23,7 @@ render(){
     return(
         <div id="gen-comp-outer"  onScroll={debounceEventHandler(this.props.onScroll, 500)}> 
             <Grid dataArray = {this.props.data}  onClick={this.props.handleOnClick} loading = {this.props.loading}/>
+            
         </div>
     )
 }

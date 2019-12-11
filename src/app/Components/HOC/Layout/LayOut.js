@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 import "./LayOut.scss";
 import SearchBar from "../../../Containers/mini-containers/search/SearchBar";
+import PlayerContainer from "../../../Containers/mini-containers/home-essntls/PlayerContainer";
+
 
 function LayOut(props) {
   const { children } = props;
@@ -57,6 +59,9 @@ function LayOut(props) {
         </Container>
       </Menu>
       <Container className="cld-div">{children}</Container>
+      <Container id="home-player-container">
+        <PlayerContainer />
+      </Container>
     </Segment>
   );
 }

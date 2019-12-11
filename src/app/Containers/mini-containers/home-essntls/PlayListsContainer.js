@@ -7,6 +7,8 @@ import {
 import { playMe } from "../../../Store/Actions/Tracks.js";
 import { connect } from "react-redux";
 import TrackList from "../../../Components/SubComponents/tracklist";
+import {viewInfo} from '../../../Store/Actions/Info';
+
 
 class PlayListsContainer extends Component {
   constructor(props) {
@@ -31,6 +33,7 @@ class PlayListsContainer extends Component {
           fetchNextTracks={this.fetchNextTracks.bind(this)}
           loading={this.state.loading}
           custom={{ theme, secondIcon }}
+          handleOnLinkClick = {this.props.viewInfo}
         />
       </div>
     );
@@ -63,6 +66,7 @@ const mapStateToProps = state1 => {
 };
 
 const mapDispatchToProps = {
+  viewInfo,
   playMe,
   removeTrackFromPlayList
 };
