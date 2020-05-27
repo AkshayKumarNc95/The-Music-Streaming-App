@@ -1,11 +1,34 @@
 ## ScreenShots
+Artist- 
+![](ScreenShots/Artist.PNG "Artist")
 
+Album- 
+![](ScreenShots/Album.PNG)
+
+ArtistsPage-
+![](ScreenShots/ArtistsPage.PNG)
+
+AlbumsPage-
+![](ScreenShots/AlbumsPage.PNG)
+
+HomePage-
+![](ScreenShots/HomePage.PNG)
+
+Search-
+![](ScreenShots/Search.PNG)
+
+Playlist-
+![](ScreenShots/Playlist.PNG)
 
 ## Demo- TBD
 
 ## Info
 The project is built to explore various parts of React and Redux! 
-Note- The back end part of this project is yet to be done. 
+
+## TBD- 
+ * Backend to store playlists
+ * Signup/ Login 
+
 
 ## How to Use- 
 Make clone/ dowload the project => In the project directory, you can run:
