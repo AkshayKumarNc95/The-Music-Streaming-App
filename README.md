@@ -15,7 +15,7 @@ HomePage-
 ![](ScreenShots/HomePage.PNG)
 
 Search-
-![](ScreenShots/Search.PNG)
+![](ScreenShots/Search.png)
 
 Playlist-
 ![](ScreenShots/Playlist.PNG)
