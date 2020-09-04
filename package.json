@@ -45,7 +45,7 @@
     "globby": "^6.1.0",
     "html-webpack-plugin": "^2.29.0",
     "image-webpack-loader": "^6.0.0",
-    "node-sass": "^4.5.2",
+    "node-sass": "^4.13.1",
     "progress-bar-webpack-plugin": "^1.11.0",
     "redux-logger": "^3.0.6",
     "rimraf": "^2.6.1",
