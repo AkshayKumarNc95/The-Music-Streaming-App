@@ -75,7 +75,7 @@
     "faker": "^4.1.0",
     "font-awesome": "^4.7.0",
     "jsonwebtoken": "^7.4.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash.chunk": "^4.2.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
