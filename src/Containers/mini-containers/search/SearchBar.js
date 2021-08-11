@@ -1,5 +1,4 @@
 import _ from "lodash";
-import faker from "faker";
 import React, { Component } from "react";
 import { Search } from "semantic-ui-react";
 import { connect } from "react-redux";
@@ -8,18 +7,6 @@ import { viewInfo } from "../../../Store/Actions/Info.js";
 import { playMe } from "../../../Store/Actions/Tracks";
 
 const initialState = { isLoading: false, results: [], value: "" };
-
-// const source1 = _.range(0, 3).reduce(memo => {
-//   const name = faker.hacker.noun();
-
-//   // eslint-disable-next-line no-param-reassign
-//   memo[name] = {
-//     name,
-//     results: getResults
-//   };
-
-//   return memo;
-// }, {});
 
 class SearchWithCategory extends Component {
   state = initialState;

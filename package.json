@@ -23,8 +23,6 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
-    "globby": "^12.0.0",
     "node-sass": "^6.0.1",
     "parcel-bundler": "^1.12.5",
     "redux-logger": "^3.0.6",
@@ -32,25 +30,13 @@
     "supertest": "^6.1.4"
   },
   "dependencies": {
-    "app-module-path": "^2.2.0",
     "axios": "^0.21.1",
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.19.0",
-    "cheerio": "^0.22.0",
-    "co": "^4.6.0",
-    "compression": "^1.7.4",
-    "create-react-app": "^4.0.3",
-    "cross-env": "^7.0.3",
-    "debug": "^4.3.2",
     "dotenv": "^10.0.0",
-    "faker": "^5.5.3",
     "font-awesome": "^4.7.0",
-    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "lodash.chunk": "^4.2.0",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
-    "lrc-parser": "^1.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-addons-css-transition-group": "^15.6.2",
@@ -66,10 +52,7 @@
     "redux": "^4.1.1",
     "redux-promise": "^0.6.0",
     "redux-thunk": "^2.3.0",
-    "request": "^2.88.2",
-    "request-promise": "^4.2.6",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3",
-    "validator": "^13.6.0"
+    "semantic-ui-react": "^2.0.3"
   }
 }
