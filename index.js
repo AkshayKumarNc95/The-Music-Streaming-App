@@ -6,16 +6,17 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import promiseMiddleware from "redux-promise";
+
 // Custom components
-import HomePage from "./Containers/HomePageContainer";
-import ArtistsPage from "./Containers/ArtistsPageContainer";
-import AlbumsPage from "./Containers/AlbumsPageContainer";
-import { LayOut } from "./Components/HOC/Layout";
+import RegisterContainer from "./src/Containers/login-containers/RegisterContainer.js";
+import InfoContainer from "./src/Containers/mini-containers/common/ArtistInfoContainer";
+import LoginContainer from "./src/Containers/login-containers/LoginContainer";
+import HomePage from "./src/Containers/HomePageContainer";
+import ArtistsPage from "./src/Containers/ArtistsPageContainer";
+import AlbumsPage from "./src/Containers/AlbumsPageContainer";
+import { LayOut } from "./src/Components/HOC/Layout";
+import reducers from "./src/Store/Reducers";
 import "./index.scss";
-import reducers from "./Store/Reducers";
-import RegisterContainer from "./Containers/login-containers/RegisterContainer.js";
-import InfoContainer from "./Containers/mini-containers/common/ArtistInfoContainer";
-import LoginContainer from "./Containers/login-containers/LoginContainer";
 
 const composeEnhancers =
   (typeof window !== "undefined" &&
@@ -47,25 +48,6 @@ render(
               <Route exact path="/" component={HomePage} />
             </LayOut>
           </Switch>
-          {/* <Route exact path="/">
-            <LayOut>
-              <HomePage />
-            </LayOut>
-          </Route>
-          <Route path="/albums">
-            <LayOut>
-              <AlbumsPage />
-            </LayOut>
-          </Route>
-          <Route path="/artists">
-            <LayOut>
-              <ArtistsPage />
-            </LayOut>
-          </Route> */}
-          {/* <ArtistInfoContainer /> */}
-          {/* <Route exact path="/" component={HomePage} /> */}
-          {/* <Route path="/albums" component={AlbumsPage} /> */}
-          {/* <Route path="/artists" component={ArtistsPage} /> */}
         </div>
       </BrowserRouter>
     </Provider>
