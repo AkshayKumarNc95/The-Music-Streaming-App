@@ -1,6 +1,12 @@
 search.ui.search{
     width: 12em;
     border-radius: 10px;
-    border: 2x solid black;
-    
+    border: 2x solid black;    
 }
+
+.search-bar{
+    width: 100px;
+    .input{
+      width: 100%;
+    }
+  }

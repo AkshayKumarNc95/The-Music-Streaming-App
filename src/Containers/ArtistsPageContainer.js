@@ -17,13 +17,7 @@ class ArtistsPageContainer extends PureComponent {
   }
 
   render() {
-    // Get the artists arrays (limit by 9) by calling the action
-    // On recevng the items, send artists
-    // Handle onclick of an artist
-    //
-
     const { artists } = this.props;
-    console.log(artists);
     return (
       <div>
         {showLoader(this.state.loadViewArtist)}

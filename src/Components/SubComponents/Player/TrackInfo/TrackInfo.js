@@ -1,7 +1,6 @@
 import React from "react";
-import { Image, Icon, Item, Container } from "semantic-ui-react";
+import { Image, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
 import "./TrackInfo.scss";
 
 const TrackInfo = props => {
@@ -16,8 +15,9 @@ const TrackInfo = props => {
           src={
             avatar
               ? avatar
-              : "https://react.semantic-ui.com/images/avatar/small/helen.jpg"
+              : 'https://www.kindpng.com/picc/m/22-223941_transparent-avatar-png-male-avatar-icon-transparent-png.png'
           }
+          alt="image" 
         />
       </div>
       <div id="track-info-header">

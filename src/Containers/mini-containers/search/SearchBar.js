@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import jamendo from "../../../common/api/jamendo";
 import { viewInfo } from "../../../Store/Actions/Info.js";
 import { playMe } from "../../../Store/Actions/Tracks";
+// import './SearcBar.scss';
 
 const initialState = { isLoading: false, results: [], value: "" };
 
@@ -144,7 +145,7 @@ class SearchWithCategory extends Component {
 
     return (
       <Search
-        size="small"
+        size= "mini"
         category
         loading={isLoading}
         onResultSelect={this.handleResultSelect.bind(this)}

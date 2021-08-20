@@ -29,7 +29,7 @@ export default function Track(props) {
       <Image
         id = "avatar-img"
         avatar
-        src={avatar? avatar: "https://react.semantic-ui.com/images/avatar/small/helen.jpg"}
+        src={avatar? avatar: 'https://www.kindpng.com/picc/m/22-223941_transparent-avatar-png-male-avatar-icon-transparent-png.png'}
       />
       <List.Content id = "list-content">
         <List.Header >

@@ -12,8 +12,10 @@ width: 100%;
 #card-header-span{
     max-width: 250px;
     white-space: nowrap;
-    text-overflow: clip;
-
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    
     &:hover{
         color:666;
         cursor:pointer;

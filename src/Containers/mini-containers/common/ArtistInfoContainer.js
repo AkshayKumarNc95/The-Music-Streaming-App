@@ -14,14 +14,18 @@ class InfoContainer extends Component {
       loading: true,
       show: true,
       showSelectPlayList: false,
-      selectedTrack: -1
+      selectedTrack: -1,
     };
   }
+  componentDidMount(){
+      document.title = 'Crazy Streamer!';
+  }
+
 
   componentDidUpdate(prevProps) {
     if (this.props.info.data && this.props.info.data.id) {
-      prevProps.info
-        ? this.props.info.data.id != prevProps.info.data.id &&
+      prevProps.info &&  prevProps.info.data
+        ? this.props.info.data.id !== prevProps.info.data.id &&
           !this.state.show &&
           this.setState({ show: true })
         : this.setState({ show: true });
@@ -29,7 +33,7 @@ class InfoContainer extends Component {
   }
 
   playThisSong(id) {
-    const trackTo = this.props.info.data.tracks.find(element => {
+    const trackTo = this.props.info.data.tracks.find((element) => {
       return element.id === id;
     });
 
@@ -37,15 +41,15 @@ class InfoContainer extends Component {
     if (this.props.info.type === "artists") {
       track = extractTrackInfo(trackTo);
     } else {
-        const trackFinal = extractTrackInfo(trackTo);
-        const artists = {
-          id: this.props.info.data.artist_id,
-          name: this.props.info.data.artist_name
-        };
-        trackFinal.albumId = this.props.info.data.id;
-        trackFinal.artists = [artists];
-        trackFinal.avatar = this.props.info.data.image;
-        track = trackFinal;
+      const trackFinal = extractTrackInfo(trackTo);
+      const artists = {
+        id: this.props.info.data.artist_id,
+        name: this.props.info.data.artist_name,
+      };
+      trackFinal.albumId = this.props.info.data.id;
+      trackFinal.artists = [artists];
+      trackFinal.avatar = this.props.info.data.image;
+      track = trackFinal;
     }
 
     this.props.playMe({ ...track });
@@ -77,9 +81,10 @@ class InfoContainer extends Component {
       ? this.props.info.data
       : { id: -1, name: "", image: "", tracks: [] };
     let trackList = "";
-    const website = (this.props.info.data && this.props.info.data.website)
-      ? this.props.info.data.website
-      : "Not found!";
+    const website =
+      this.props.info.data && this.props.info.data.website
+        ? this.props.info.data.website
+        : "Not found!";
     if (id > -1 && this.state.show) {
       // Create the track list component here
       trackList = (
@@ -88,8 +93,12 @@ class InfoContainer extends Component {
           playTrackHandler={this.playThisSong.bind(this)}
           addOrRemoveTrack={this.addThisTrack.bind(this)}
           fetchNextTracks={() => {}}
-          custom={{ theme: "dark", secondIcon: "plus", isArtist: this.props.info.type === "artists" }}
-          />
+          custom={{
+            theme: "dark",
+            secondIcon: "plus",
+            isArtist: this.props.info.type === "artists",
+          }}
+        />
       );
     }
     // Call get Artist Info, and dispaly loading!
@@ -124,15 +133,15 @@ class InfoContainer extends Component {
   getWhatisNeededFromTheTracks() {
     const info = this.props.info;
     if (info.type === "artists") {
-      return info.data.tracks.map(track => {
+      return info.data.tracks.map((track) => {
         return extractTrackInfo(track);
       });
     } else {
-      return info.data.tracks.map(track => {
+      return info.data.tracks.map((track) => {
         const trackFinal = extractTrackInfo(track);
         const artists = {
           id: info.data.artist_id,
-          name: info.data.artist_name
+          name: info.data.artist_name,
         };
         trackFinal.albumId = info.data.id;
         trackFinal.artists = [artists];
@@ -151,14 +160,14 @@ function extractTrackInfo(track) {
     albumId: track.album_id,
     artists: [artists],
     avatar: track.image,
-    songData: track.audio
+    songData: track.audio,
   };
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     info: state.ViewInfo,
-    playLists: state.plays
+    playLists: state.plays,
   };
 };
 

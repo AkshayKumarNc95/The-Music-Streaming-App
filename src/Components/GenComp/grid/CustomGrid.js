@@ -8,7 +8,7 @@ const GridExampleRelaxed = props => {
     ? props.dataArray
     : [];
   let columns = props.columns ? props.columns : 5;
-  const imageSrc = "/bright-clouds-color-1470589.jpg";
+  const imageSrc = 'https://www.kindpng.com/picc/m/22-223941_transparent-avatar-png-male-avatar-icon-transparent-png.png';
   console.log(columns);
   return (
     <Grid relaxed columns={columns}>

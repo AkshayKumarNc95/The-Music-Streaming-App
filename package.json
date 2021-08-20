@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html",
+    "build": "react-scripts build && npm run copy",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "copy": "copy public/.htaccess dist"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -25,6 +27,7 @@
   "devDependencies": {
     "node-sass": "^6.0.1",
     "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
     "redux-logger": "^3.0.6",
     "rimraf": "^3.0.2",
     "supertest": "^6.1.4"
@@ -54,5 +57,9 @@
     "redux-thunk": "^2.3.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3"
+  },
+  "staticFiles": {
+    "staticPath": "public",
+    "watcherGlob": "**"
   }
 }
