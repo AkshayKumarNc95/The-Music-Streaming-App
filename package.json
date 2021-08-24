@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "parcel ./index.html --open",
-    "build": "parcel build ./index.html --public-url ./ --no-source-maps",
+    "build": "parcel build ./index.html --public-url ./",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "copy": "copy public/.htaccess dist"
