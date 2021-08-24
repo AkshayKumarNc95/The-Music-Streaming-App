@@ -2,7 +2,7 @@ import _ from "lodash";
 import React, { Component } from "react";
 import { Search } from "semantic-ui-react";
 import { connect } from "react-redux";
-import jamendo from "../../../common/api/jamendo";
+import jamendo from "../../../Common/api/jamendo"
 import { viewInfo } from "../../../Store/Actions/Info.js";
 import { playMe } from "../../../Store/Actions/Tracks";
 // import './SearcBar.scss';

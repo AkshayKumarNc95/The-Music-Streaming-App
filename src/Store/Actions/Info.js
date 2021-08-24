@@ -1,5 +1,5 @@
 
-import jamendo from "../../common/api/jamendo.js";
+import jamendo from "../../Common/api/jamendo.js";
 export const viewInfo =(id, type = "artists") =>{
 
     // Use call backs and get the artist info along with the tracks associated and dispatch the actions

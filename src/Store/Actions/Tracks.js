@@ -1,4 +1,4 @@
-import jamendo from "../../common/api/jamendo.js";
+import jamendo from "../../Common/api/jamendo.js";
 
 // Variabbles
 let style = "";

@@ -1,4 +1,4 @@
-import jamendo from "../../common/api/jamendo";
+import jamendo from "../../Common/api/jamendo";
 
 let pageNum = 0;
 let lastAdded = 1;

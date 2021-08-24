@@ -1,4 +1,4 @@
-import jamendo from "../../common/api/jamendo.js";
+import jamendo from "../../Common/api/jamendo.js";
 
 export const getAlbums = (next = undefined) => {
   const client_id = "303ece4b";
