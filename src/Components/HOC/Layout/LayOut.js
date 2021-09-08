@@ -43,19 +43,6 @@ function LayOut(props) {
           <Menu.Item position="left">
             <SearchBar />
           </Menu.Item>
-          <Menu.Item position="right">
-            <Button as="a" inverted={!fixed}>
-              Log in
-            </Button>
-            <Button
-              as="a"
-              inverted={!fixed}
-              primary={fixed}
-              style={{ marginLeft: "0.5em" }}
-            >
-              Sign Up
-            </Button>
-          </Menu.Item>
         </Container>
       </Menu>
       <Container className="cld-div">{children}</Container>
